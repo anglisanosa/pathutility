@@ -1,7 +1,7 @@
 
 
-from path_utils.crontab import Crontab
+from path_utils.pathutils import PathUtils
 
 __all__ = [
-    Crontab
+    PathUtils
 ]
