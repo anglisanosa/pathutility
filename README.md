@@ -7,7 +7,7 @@ PathUtils is a utility class for handling various path-related operations in Pyt
 To install PathUtils, simply use pip:
 
 ```bash
-pip install pathutils
+pip install pathutility
 
 ```
 
@@ -15,7 +15,7 @@ pip install pathutils
 Here's an example of how to use the PathUtils class:
 
 ```python
-from pathutils import PathUtils
+from pathutility import PathUtils
 
 # Create an instance of PathUtils
 path_util = PathUtils()
