@@ -41,7 +41,7 @@ setup(
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
     url='https://github.com/anglisano/path_utils.git',
-    description='cron tab handler',
+    description='path_utils is a Python library for working with file paths.',
     long_description=open('README.md', 'r').read(),
     long_description_content_type='text/markdown',
     classifiers=[

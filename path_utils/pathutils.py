@@ -1,7 +1,7 @@
        
 import os
 import chardet
-from utils.errors import FileOperationError
+from path_utils.utils.errors import FileOperationError
 
 class PathUtils:
     """

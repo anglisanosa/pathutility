@@ -41,7 +41,7 @@ jobs:
       run: |
         pip install -r requirements.txt --no-dependencies
     - name: Build package
-      run: python -m build
+      run: python setup.py bdist_wheel
     - name: Publish package
       run: python -m twine upload dist/* --username __token__ --password ${{ secrets.PYPI_API_TOKEN }} --non-interactive --verbose
       # uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
