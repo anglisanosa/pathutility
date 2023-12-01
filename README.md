@@ -33,7 +33,7 @@ print(f"Files in directory: {files_list}")
 ```
 
 ## Documentation
-The Sphinx-generated documentation for PathUtils can be found [here](http://tuputamare.com).
+The Sphinx-generated documentation for PathUtils can be found [here](https://anglisanosa.github.io/pathutility/).
 
 ## Contribution
-Feel free to contribute by submitting issues [here](http://tuputamare.com).
+Feel free to contribute by submitting issues [here](https://github.com/anglisanosa/pathutility/issues).

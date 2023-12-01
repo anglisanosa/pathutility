@@ -9,6 +9,9 @@ Relase Notes
    * - Version
      - Authors
      - Release Notes
+   * - 0.0.2
+     - Marc Anglisano Roca
+     - add licks documentation.
    * - 0.0.1
      - Marc Anglisano Roca
      - add simple functionality using os.

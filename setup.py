@@ -40,7 +40,7 @@ setup(
     version=__version__,
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
-    url='https://github.com/anglisano/pathutility.git',
+    # url='https://github.com/anglisano/pathutility.git',
     description='pathutility is a Python library for working with file paths.',
     long_description=open('README.md', 'r').read(),
     long_description_content_type='text/markdown',
@@ -60,9 +60,9 @@ setup(
     },
     python_requires='>=3.8',
     project_urls={
-        'Documentation': 'https://anglisano.github.io/pathutility/',
-        'Bug Reports': 'https://github.com/anglisano/pathutility/issues',
-        'Source': 'https://github.com/anglisano/pathutility.git',
+        'Documentation': 'https://anglisanosa.github.io/pathutility/',
+        'Bug Reports': 'https://github.com/anglisanosa/pathutility/issues',
+        'Source': 'https://github.com/anglisanosa/pathutility',
     },
     license='',
 )
