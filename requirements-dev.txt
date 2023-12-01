@@ -1,0 +1,12 @@
+fire
+black
+pylance
+mypy
+pylint
+coverage
+unittest-xml-reporting
+sphinx
+sphinx_rtd_theme
+sphinx-copybutton
+sphinx-multiversion
+
