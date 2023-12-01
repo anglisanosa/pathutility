@@ -20,8 +20,8 @@ Prerequisites
 SDK installation via pip
 ------------------------
 
-To install path_utils using pip
+To install pathutility using pip
 
 .. code-block:: console
 
-   (.venv) $ pip install path_utils
+   (.venv) $ pip install pathutility

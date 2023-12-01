@@ -4,5 +4,5 @@ API Guide
 Model Class
 -----------
 
-.. automodule:: path_utils.pathutils
+.. automodule:: pathutility.pathutils
    :members: PathUtils

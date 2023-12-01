@@ -21,7 +21,7 @@ current_file_path = Path(os.getcwd())
 project_root_path = current_file_path.parent.parent
 sys.path.insert(0, os.path.abspath(str(project_root_path)))
 
-package_name = "path_utils"
+package_name = "pathutility"
 version = importlib.import_module(f"{package_name}._version")
 todays_date = date.today()
 
@@ -33,7 +33,7 @@ def setup(app):
 
 # -- Project information -----------------------------------------------------
 
-project = "path_utils"
+project = "pathutility"
 copyright = f"{todays_date.year} Marc Anglisano Roca - Spain."
 
 # The full version, including alpha/beta/rc tags
