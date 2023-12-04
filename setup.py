@@ -7,10 +7,26 @@ from setuptools import (
     setup
 )
 
-from pathutility._version import __version__
-
+# from pathutility._version import __version__
 PKG_ROOT = os.path.dirname((os.path.abspath(__file__)))
 
+def get_version() -> float:
+    specs = {}
+    version_var = '__version__'
+    version_file = os.path.join(
+        PKG_ROOT, 'pathutility', '_version.py'
+    )
+
+    with open(version_file, 'r') as file:
+        code = file.read()
+        # Executing code to get the version variable
+        exec(code, specs)
+        try:
+            version = specs[version_var]
+        except KeyError:
+            raise AttributeError(f'Cannot find {version_var} in {version_file}')
+        else:
+            return version
 
 def get_requirements() -> List[str]:
     with open(os.path.join(PKG_ROOT, 'requirements.txt')) as f:
@@ -37,7 +53,7 @@ def get_package_data_files(pattern: str) -> List[str]:
 
 setup(
     name='pathutility',
-    version=__version__,
+    version=get_version(),
     author='Marc anglisano',
     author_email='marcanglisano@gmail.com',
     # url='https://github.com/anglisano/pathutility.git',
@@ -58,6 +74,7 @@ setup(
             *get_package_data_files(pattern='*.txt'),
         ]
     },
+    install_requires=get_requirements(),
     python_requires='>=3.8',
     project_urls={
         'Documentation': 'https://anglisanosa.github.io/pathutility/',
