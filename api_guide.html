@@ -1,0 +1,295 @@
+ <!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Guide &mdash; pathutility 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+<link href=" _static/custom.css" rel="stylesheet" type="text/css">
+ 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: linear-gradient(125deg, hsl(193deg 47% 4%) 0%, hsl(193deg 33% 9%) 9%, hsl(193deg 42% 12%) 16%, hsl(192deg 49% 15%) 23%, hsl(192deg 57% 18%) 29%, hsl(191deg 65% 21%) 36%, hsl(191deg 65% 24%) 44%, hsl(191deg 64% 28%) 53%, hsl(191deg 64% 31%) 63%, hsl(190deg 64% 34%) 76%, hsl(190deg 65% 38%) 100%);" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pathutility
+              <img src="_static/minion.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Relase Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pathutility.pathutils">Model Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pathutility.pathutils.PathUtils"><code class="docutils literal notranslate"><span class="pre">PathUtils</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.create_directory_if_not_exists"><code class="docutils literal notranslate"><span class="pre">PathUtils.create_directory_if_not_exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_access_time"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_access_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_creation_time"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_creation_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_encoding"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_encoding()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_extension"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_extension()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_modification_time"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_modification_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_file_size"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_file_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_filename"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_filename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_filename_without_extension"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_filename_without_extension()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.get_parent_directory"><code class="docutils literal notranslate"><span class="pre">PathUtils.get_parent_directory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.is_file_exists"><code class="docutils literal notranslate"><span class="pre">PathUtils.is_file_exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathutility.pathutils.PathUtils.list_files_in_directory"><code class="docutils literal notranslate"><span class="pre">PathUtils.list_files_in_directory()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: linear-gradient(125deg, hsl(193deg 47% 4%) 0%, hsl(193deg 33% 9%) 9%, hsl(193deg 42% 12%) 16%, hsl(192deg 49% 15%) 23%, hsl(192deg 57% 18%) 29%, hsl(191deg 65% 21%) 36%, hsl(191deg 65% 24%) 44%, hsl(191deg 64% 28%) 53%, hsl(191deg 64% 31%) 63%, hsl(190deg 64% 34%) 76%, hsl(190deg 65% 38%) 100%);" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pathutility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Guide</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-guide">
+<h1>API Guide<a class="headerlink" href="#api-guide" title="Link to this heading"></a></h1>
+<section id="module-pathutility.pathutils">
+<span id="model-class"></span><h2>Model Class<a class="headerlink" href="#module-pathutility.pathutils" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pathutility.pathutils.</span></span><span class="sig-name descname"><span class="pre">PathUtils</span></span><a class="headerlink" href="#pathutility.pathutils.PathUtils" title="Link to this definition"></a></dt>
+<dd><p>A utility class for handling path-related operations.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>properties (dict): A dictionary containing properties retrieved based on the provided parameters.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.create_directory_if_not_exists">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_directory_if_not_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.create_directory_if_not_exists" title="Link to this definition"></a></dt>
+<dd><p>Create a directory if it doesn’t exist.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the directory to be created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_access_time">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_access_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_access_time" title="Link to this definition"></a></dt>
+<dd><p>Get the last access time of a file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The last access time of the file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_creation_time">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_creation_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_creation_time" title="Link to this definition"></a></dt>
+<dd><p>Get the creation time of a file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The creation time of the file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_encoding">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_encoding" title="Link to this definition"></a></dt>
+<dd><p>Detect file encoding.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str or None: The detected encoding or None if an error occurs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_extension">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_extension" title="Link to this definition"></a></dt>
+<dd><p>Get the file extension from a path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path from which to extract the extension.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The file extension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_modification_time">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_modification_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_modification_time" title="Link to this definition"></a></dt>
+<dd><p>Get the last modification time of a file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The last modification time of the file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_file_size">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_file_size" title="Link to this definition"></a></dt>
+<dd><p>Get the size of a file in bytes.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The size of the file in bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_filename">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_filename" title="Link to this definition"></a></dt>
+<dd><p>Get the filename from a path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path from which to extract the filename.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The filename.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_filename_without_extension">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filename_without_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_filename_without_extension" title="Link to this definition"></a></dt>
+<dd><p>Get the filename without its extension from a path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path from which to extract the filename.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The filename without extension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.get_parent_directory">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parent_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.get_parent_directory" title="Link to this definition"></a></dt>
+<dd><p>Get the parent directory of a given path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path from which to get the parent directory.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The parent directory path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.is_file_exists">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_file_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.is_file_exists" title="Link to this definition"></a></dt>
+<dd><p>Check if a file exists.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): The path to the file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the file exists, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pathutility.pathutils.PathUtils.list_files_in_directory">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_files_in_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathutility.pathutils.PathUtils.list_files_in_directory" title="Link to this definition"></a></dt>
+<dd><p>List all files in a directory.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>directory (str): The path to the directory.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list of filenames in the directory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Marc Anglisano Roca - Spain..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
