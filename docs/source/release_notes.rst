@@ -9,6 +9,9 @@ Relase Notes
    * - Version
      - Authors
      - Release Notes
+   * - 1.0.0
+     - Marc Anglisano Roca
+     - Fix setup requirements and Relase.
    * - 0.0.2
      - Marc Anglisano Roca
      - add licks documentation.
